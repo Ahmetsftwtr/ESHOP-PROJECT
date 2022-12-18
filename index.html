@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-TİCARET</title>
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/menu.css" rel="stylesheet">
+    <script defer src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" integrity="sha384-rOA1PnstxnOBLzCLMcre8ybwbTmemjzdNlILg8O7z1lUkLXozs4DHonlDtnE7fpc" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.2.0/css/all.css">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"/>
+<link href="css/slider.css" rel="stylesheet">
+
+
+
+</head>
+<body>
+    <div class="view_basket" id="viewbasket">
+    <span style="font-size: 1.5rem;cursor: pointer;" onclick="CloseBasket()"><i class="fas fa-times"></i></span>
+
+     <p style="text-align: center;font-size: 2rem;">Alışveriş Sepetim</p>
+
+     <div class="view_basket_end">
+        <button type="button">Alışverişi tamamla</button>
+     </div>
+    </div>
+
+<!-- 
+<div class="head_first">
+<ul>
+    <li>Kargom nerede?</li>
+    <li>Yardım & Destek</li>
+    <li>İletişim</li>
+</ul>
+</div>
+-->
+
+<div class="slide_text">
+    <img src="pet.png" width="60" height="60" style="float:left;object-fit:contain;">
+    <p>Şirketimizin gelirlerinin %20'sinin Sokak Hayvanlarına Bağışlandığını biliyormuydunuz ?</p>
+</div>
+    
+
+
+<nav>
+    <div id="mobile_toggle" class="toggle-button">
+        <div></div>
+        <div></div>
+        <div></div>
+    
+    </div>
+    <div class="logo">
+        <h1>ESHOP</h1>
+    </div>
+    
+    <div class="search">
+        <input type="text" placeholder="Ürün ara">
+        <button type="button"><i class="fal fa-search"></i> Ara</button>
+    </div>
+    <ul class="navbar_right">
+        <li><i class="fal fa-user"></i> <p>Hesabım</p></li>
+        <li><i class="fal fa-heart"></i> <p>Favorilerim</p></li>
+        <li onclick="ShowBasket()"><div class="basket_item_count">0</div><i class="fal fa-shopping-bag"></i> <p>Sepet</p   ></li>
+    </ul>
+
+</nav>
+
+
+
+
+
+
+
+<div id="mega_menu" class="mega_menu">
+
+<ul class="mega_category">
+
+<li class="mega_category_item">
+    <a href="#" id="mega_link">Kadın</a>
+    <div id="mega_menu_dropdown">
+    
+    <div class="row">
+        <div class="column">
+            <ul>
+                <li class="mega_category_item_sub">Kadın Kategori Alt
+                </li>
+            </ul>
+        </div>
+        <div class="column">
+            <ul>
+                <li class="mega_category_item_sub">Kadın Kategori Alt    
+            </ul>
+        </div>
+        <div class="column">
+            <ul>
+                <li class="mega_category_item_sub">Kadın Kategori Alt            
+                
+                </ul>
+        </div>
+        <div class="column">
+            <ul>
+                <li class="mega_category_item_sub">Kadın Kategori Alt                    
+                </ul>
+        </div>
+    </div>        
+</div>
+    
+
+</li>
+
+
+<li class="mega_category_item">
+    <a href="#" id="mega_link">Erkek</a>
+    <div id="mega_menu_dropdown">
+    
+    <div class="row">
+        <div class="column">
+            <ul>
+                <li class="mega_category_item_sub">Erkek Kategori Alt
+                </li>
+            </ul>
+        </div>
+        <div class="column">
+            <ul>
+                <li class="mega_category_item_sub">Erkek Kategori Alt    
+            </ul>
+        </div>
+        <div class="column">
+            <ul>
+                <li class="mega_category_item_sub">Erkek Kategori Alt            
+                
+                </ul>
+        </div>
+        <div class="column">
+            <ul>
+                <li class="mega_category_item_sub">Erkek Kategori Alt                    
+                </ul>
+        </div>
+    </div>        
+</div>
+    
+
+</li>
+
+
+
+
+<li class="mega_category_item">
+    <a href="#" id="mega_link">Ev & Mobilya</a>
+    <div id="mega_menu_dropdown">
+    
+    <div class="row">
+        <div class="column">
+            <ul>
+                <li class="mega_category_item_sub">Ev & Mobilya Kategori Alt
+                </li>
+            </ul>
+        </div>
+        <div class="column">
+            <ul>
+                <li class="mega_category_item_sub">Ev & Mobilya Kategori Alt    
+            </ul>
+        </div>
+        <div class="column">
+            <ul>
+                <li class="mega_category_item_sub">Ev & Mobilya Kategori Alt            
+                
+                </ul>
+        </div>
+        <div class="column">
+            <ul>
+                <li class="mega_category_item_sub">Ev & Mobilya Kategori Alt                    
+                </ul>
+        </div>
+    </div>        
+</div>
+    
+
+</li>
+
+
+
+<li class="mega_category_item">
+    <a href="#" id="mega_link">Kozmetik</a>
+    <div id="mega_menu_dropdown">
+    
+    <div class="row">
+        <div class="column">
+            <ul>
+                <li class="mega_category_item_sub">Kozmetik Kategori Alt
+                </li>
+            </ul>
+        </div>
+        <div class="column">
+            <ul>
+                <li class="mega_category_item_sub">Kozmetik Kategori Alt    
+            </ul>
+        </div>
+        <div class="column">
+            <ul>
+                <li class="mega_category_item_sub">Kozmetik Kategori Alt            
+                
+                </ul>
+        </div>
+        <div class="column">
+            <ul>
+                <li class="mega_category_item_sub">Kozmetik Kategori Alt                    
+                </ul>
+        </div>
+    </div>        
+</div>
+    
+
+</li>
+
+
+
+<li class="mega_category_item">
+    <a href="#" id="mega_link">Ayakabı & Çanta</a>
+    <div id="mega_menu_dropdown">
+    
+    <div class="row">
+        <div class="column">
+            <ul>
+                <li class="mega_category_item_sub">Ayakabı & Çanta Kategori Alt
+                </li>
+            </ul>
+        </div>
+        <div class="column">
+            <ul>
+                <li class="mega_category_item_sub">Ayakabı & Çanta Kategori Alt    
+            </ul>
+        </div>
+        <div class="column">
+            <ul>
+                <li class="mega_category_item_sub">Ayakabı & Çanta Kategori Alt            
+                
+                </ul>
+        </div>
+        <div class="column">
+            <ul>
+                <li class="mega_category_item_sub">Ayakabı & Çanta Kategori Alt                    
+                </ul>
+        </div>
+    </div>        
+</div>
+    
+
+</li>
+
+
+
+<li class="mega_category_item">
+    <a href="#" id="mega_link">Saat & Aksesuar</a>
+    <div id="mega_menu_dropdown">
+    
+    <div class="row">
+        <div class="column">
+            <ul>
+                <li class="mega_category_item_sub">Saat & Aksesuar Kategori Alt
+                </li>
+            </ul>
+        </div>
+        <div class="column">
+            <ul>
+                <li class="mega_category_item_sub">Saat & Aksesuar Kategori Alt    
+            </ul>
+        </div>
+        <div class="column">
+            <ul>
+                <li class="mega_category_item_sub">Saat & Aksesuar Kategori Alt            
+                
+                </ul>
+        </div>
+        <div class="column">
+            <ul>
+                <li class="mega_category_item_sub">Saat & Aksesuar Kategori Alt                    
+                </ul>
+        </div>
+    </div>        
+</div>
+    
+
+</li>
+
+
+
+<li class="mega_category_item">
+    <a href="#" id="mega_link">Elektronik</a>
+    <div id="mega_menu_dropdown">
+    
+    <div class="row">
+        <div class="column">
+            <ul>
+                <li class="mega_category_item_sub">Elektronik Kategori Alt
+                </li>
+            </ul>
+        </div>
+        <div class="column">
+            <ul>
+                <li class="mega_category_item_sub">Elektronik Kategori Alt    
+            </ul>
+        </div>
+        <div class="column">
+            <ul>
+                <li class="mega_category_item_sub">Elektronik Kategori Alt            
+                
+                </ul>
+        </div>
+        <div class="column">
+            <ul>
+                <li class="mega_category_item_sub">Elektronik Kategori Alt                    
+                </ul>
+        </div>
+    </div>        
+</div>
+    
+
+</li>
+
+
+
+<li class="mega_category_item">
+    <a href="#" id="mega_link" style="color:#FF7000;font-weight: bold;">Outdoor</a>
+    <div id="mega_menu_dropdown">
+    
+    <div class="row">
+        <div class="column">
+            <ul>
+                <li class="mega_category_item_sub">Spor & Outdoor Kategori Alt
+                </li>
+            </ul>
+        </div>
+        <div class="column">
+            <ul>
+                <li class="mega_category_item_sub">Spor & Outdoor Kategori Alt    
+            </ul>
+        </div>
+        <div class="column">
+            <ul>
+                <li class="mega_category_item_sub">Spor & Outdoor Kategori Alt            
+                
+                </ul>
+        </div>
+        <div class="column">
+            <ul>
+                <li class="mega_category_item_sub">Spor & Outdoor Kategori Alt                    
+                </ul>
+        </div>
+    </div>        
+</div>
+    
+
+</li>
+
+
+
+
+
+
+</ul>
+</div>
+
+    <!-- Swiper -->
+    <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide"><img src="img/main-slider-2.PNG"></div>
+            <div class="swiper-slide"><img src="img/main-slider-1.PNG"></div>
+            <div class="swiper-slide"><img src="img/main-slider-2.PNG"></div>
+            <div class="swiper-slide"><img src="img/main-slider.3.PNG"></div>
+            <div class="swiper-slide"><img src="img/main-slider-1.PNG"></div>
+            <div class="swiper-slide"><img src="img/main-slider-2.PNG"></div>
+            <div class="swiper-slide"><img src="img/main-slider.3.PNG"></div>
+        </div>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-prev main-swiper-button-prev"><i class="fas fa-caret-left"></i></div>
+        <div class="swiper-button-next main-swiper-button-next"><i class="fas fa-caret-right"></i></div>
+      </div>
+  
+      <!-- Swiper JS -->
+      <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+      <script>
+      var swiper = new Swiper(".mySwiper", {
+        spaceBetween: 10,
+        centeredSlides: true,
+        loop: true,
+        slidesPerView: 2,
+        loopFillGroupWithBlank: false,
+        navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+                    },
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        breakpoints: {
+          640: {
+            slidesPerView: 1,
+            spaceBetween: 10,
+          },
+          768: {
+            slidesPerView: 3,
+            spaceBetween: 10,
+          },
+          1024: {
+            slidesPerView:4,
+            spaceBetween: 10,
+          },
+        },
+      });
+      </script>      
+</header>
+
+
+
+
+<div class="container">
+    <h1 style="color:rgb(66, 65, 65);">Süper Fiyat, Süper Teklif </h1>
+    <p><a href="#" style="color:#FF7000;text-decoration:none;font-size:1.1rem;font-weight: bold;">Tümü ></a></p>
+<div class="new_products">
+
+<div class="new_products_item">
+<span><i class="fal fa-heart"></i></span>
+<img src="https://productimages.hepsiburada.net/s/9/200-200/8961956839474.jpg">
+
+
+
+
+<p>Millet Bouthan Gore-Tex Erkek Trekking Ayakkabısı MIG1153</p>
+<p style="text-decoration:line-through;color:gray">4200 TL</p>
+<p>3.900 TL</p>
+
+<button type="button">Sepete ekle</button>
+</div>
+
+<div class="new_products_item">
+    <span><i class="fal fa-heart"></i></span>
+    <img src="https://productimages.hepsiburada.net/s/38/222-222/10600998961202.jpg/format:webp">
+    
+
+    
+    <p>Asus VG259QM 24.5" 280Hz 1ms (HDMI+Display) GSync Full HD IPS Monitör    </p>
+    <p style="text-decoration:line-through;color:gray">8.300 TL</p>
+    <p>6.900 TL</p>
+    <button type="button">Sepete ekle</button>
+
+</div>
+<div class="new_products_item">
+    <span><i class="fal fa-heart"></i></span>
+    <img src="https://productimages.hepsiburada.net/s/265/200-200/110000250119736.jpg">
+    
+
+    
+    <p>Xiaomi Redmi 9c 128 GB 4 GB Ram (Xiaomi Türkiye Garantili)    </p>
+    <p style="text-decoration:line-through;color:gray">5200 TL</p>
+    <p>4.299,50 TL </p>
+    <button type="button">Sepete ekle</button>
+
+</div>
+<div class="new_products_item">
+    <span><i class="fal fa-heart"></i></span>
+    <img src="https://productimages.hepsiburada.net/s/311/200-200/110000281476154.jpg">
+
+    
+    
+    <p>Joystar Erkek Outdoor Ayakkabı </p>
+    <p style="text-decoration:line-through;color:gray">520 TL</p>
+    <p>299.90 TL</p>
+    <button type="button">Sepete ekle</button>
+
+</div>
+<div class="new_products_item">
+    <span><i class="fal fa-heart"></i></span>
+    <img src="https://productimages.hepsiburada.net/s/179/200-200/110000143947755.jpg">
+    
+    
+    
+    <p>Regal CM 61000 6 Kg 1000 Devir </p>
+    <p style="text-decoration:line-through;color:gray">4500 TL</p>
+    <p>4.199,00 TL</p>
+    <button type="button">Sepete ekle</button>
+
+</div>
+<div class="new_products_item">
+    <span><i class="fal fa-heart"></i></span>
+    <img src="https://productimages.hepsiburada.net/s/9/200-200/8961956839474.jpg">
+    
+    
+    
+    <p>Millet Bouthan Gore-Tex Erkek Trekking Ayakkabısı MIG1153</p>
+    <p style="text-decoration:line-through;color:gray">4200 TL</p>
+    <p>3.900 TL</p>
+    <button type="button">Sepete ekle</button>
+
+</div>
+
+</div>
+
+
+
+
+
+
+<script>
+   function ShowBasket()
+   {
+        var Basket = document.getElementById('viewbasket');
+        if(Basket.style.display != "block")
+        {
+            Basket.style.display = "block"; 
+            // Lazım document.documentElement.style.setProperty('--default-color', 'yellow');
+
+
+        }
+
+   }
+   function CloseBasket()
+   {
+    var Basket = document.getElementById('viewbasket');
+        if(Basket.style.display != "none")
+        {
+            Basket.style.display = "none"; 
+        }
+   }
+
+
+   var toggle = document.getElementById('mobile_toggle');
+
+toggle.addEventListener("click",function(){
+
+    var menu = document.getElementById('mega_menu')
+
+    if (menu.style.display === "block") {
+        menu.style.display = "none";
+      } else {
+        menu.style.display = "block";
+      }
+
+})
+
+
+const MegaButton = document.querySelectorAll("#mega_link");
+
+MegaButton.forEach((el) =>
+  el.addEventListener("click", (event) => {
+    
+    const subMenu = event.target.parentElement.querySelector("#mega_menu_dropdown");
+    if (subMenu.style.display === "block") {
+
+        subMenu.style.display = "none";
+        el.style.fontWeight = "500";
+
+      } else {
+        subMenu.style.display = "block";
+        el.style.fontWeight = "900";
+
+      }
+
+
+  })
+);
+</script>
+
+
+</body>
+</html>
